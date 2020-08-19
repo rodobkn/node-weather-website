@@ -5,6 +5,8 @@ const hbs = require('hbs')  //We are importing hbs in order to be able to set up
 const geocode = require('./utils/geocode');  
 const forecast = require('./utils/forecast');
 
+const port = process.env.PORT || 3000  //Here we are setting up the port. If we are on heroku will use the first one. if the first one doesn't exists, JS will choose the second one, and that will be the case of run locally the program
+
 //"__dirname" brings to us the exact absolute path for the directory where we are(in this case src). And then you can join with the specific place that you want to go
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -125,7 +127,7 @@ app.get('*', (req, res) => {
 
 
 //If we want to run our server, we need to add this line. In the first argument we provide the port where we want to have the project
-app.listen(3000, () => {
-    console.log('Server is up on port 3000');
+app.listen(port, () => {
+    console.log('Server is up on port ' + port);
 });
 
