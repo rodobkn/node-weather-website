@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <!-- To set up the name of the page in the tab we use the flag <title> -->
+    <title>Weather</title>   
+    <!-- To set up the icon shows in the tab, you must use the following code--> 
+    <link rel="icon" href="/img/weather.png">
+    <!-- We can write href="./css/styles.css" ass well. But we decide to use absolute path, because we set up the absolute path in app.js-->
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
+<body>
+
+    <div class="main-content" >
+        {{>header}}
+        <p>Use this site to get your weather!</p>
+
+        <form>
+            <input placeholder="Location" >
+            <button>Search</button>
+        </form>
+
+        <p id="message-1" ></p>
+        <p id="message-2"></p>
+
+    </div>
+
+    {{>footer}}
+
+    <!-- Here we are adding the client side javascript. It is importan to write this code at the final of body, because we will select html flags in the client side javascript. So is necessary that the website render all the information before to use this html flags -->
+    <script src="/js/app.js" ></script>
+</body>
+
+
+</html>  

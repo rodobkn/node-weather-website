@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Help</title> 
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <div class="main-content">
+        {{!-- {{This is the way to put in place partials  }} --}}
+        {{>header}}
+
+        {{!-- {{In order to use the dynamics elements provided for the backend, we need to use two curly braces -> {{}}  }} --}}
+        <p> {{message}} </p>
+    </div>
+
+    {{>footer}}
+</body>
+
+
+</html>
